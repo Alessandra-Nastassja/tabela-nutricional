@@ -1,7 +1,11 @@
-describe('template spec', () => {
+describe('verifica lista de produtos', () => {
   it('passes', () => {
-    cy.visit('/')
+    cy.visit('/');        
+  })
+})
 
-    cy.get('[aria-label="Angular on twitter"]').click();         
+describe('verifica detalhe do produto', () => {
+  it('passes', () => {
+    cy.visit('/');        
   })
 })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tabela-nutricional';
+
+  constructor(private appService: AppService ){}
+
+  ngOnInit(){
+    this.getListFruit();
+  }
+
+  getListFruit() {
+    this.appService.getListFruit().subscribe((res) => {
+      console.log('res', res);
+      
+    })
+  }
 }
